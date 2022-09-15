@@ -12,8 +12,8 @@ using MusicStore.Data;
 namespace MusicStore.Migrations
 {
     [DbContext(typeof(MusicStoreContext))]
-    [Migration("20220908091010_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220915085554_fuck")]
+    partial class fuck
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

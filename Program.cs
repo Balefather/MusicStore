@@ -8,6 +8,7 @@ builder.Services.AddDbContext<MusicStoreContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,6 +20,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
+
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -28,5 +32,10 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Use(async (context, next) => {
+    app.Logger.LogInformation("Nicklas");
+    await next.Invoke(context);
+});
 
 app.Run();

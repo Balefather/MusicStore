@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MusicStore.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class fuck : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
